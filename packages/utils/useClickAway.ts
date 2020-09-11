@@ -8,11 +8,11 @@ const useClickAway = (
   target: Ref<HTMLElement | null>,
   eventName = defaultEvent
 ) => {
-  const handler = (event: any) => {
-    if (!target.value || target.value.contains(event?.target)) {
+  const handler = (event: Event) => {
+    if (!target.value || target.value.contains(event?.target as Node)) {
       return
     }
-    onClickAway(event)
+    onClickAway(event as EventType)
   }
 
   onMounted(() => {

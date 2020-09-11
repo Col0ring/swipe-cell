@@ -1,10 +1,10 @@
 <template>
   <div>
-    <swipe-cell content="example"> </swipe-cell>
-    <swipe-cell content="example" delText="delete" @delete="handleDelete">
+    <swipe-cell> </swipe-cell>
+    <swipe-cell content="example2" delText="delete" @delete="handleDelete">
     </swipe-cell>
     <swipe-cell>
-      example
+      example3
       <template #actions>
         <button>删除</button>
       </template>

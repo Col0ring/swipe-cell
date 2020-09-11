@@ -1,11 +1,12 @@
-import { Plugin } from 'vue'
-
-declare const _default: Plugin
+import { App } from 'vue'
 
 export interface SwipeCellProps {
   content: string
   delText: string
 }
-export declare const SwipeCell: any
+declare class SwipeCell {
+  static install(app: App): void
+  $props: SwipeCellProps
+}
 
-export default _default
+export default SwipeCell
