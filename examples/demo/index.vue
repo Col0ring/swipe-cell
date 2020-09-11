@@ -14,8 +14,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-
+import { SwipeCell } from '@col0ring/swipe-cell'
 export default defineComponent({
+  components: {
+    SwipeCell
+  },
   setup() {
     const handleDelete = () => {
       console.log('delete')
