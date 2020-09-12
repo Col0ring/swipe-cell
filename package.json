@@ -1,6 +1,6 @@
 {
   "name": "@col0ring/swipe-cell",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "main": "lib/swipe-cell.umd.min.js",
   "license": "MIT",
@@ -46,9 +46,11 @@
     "typescript": "~3.9.3",
     "vue-cli-plugin-vue-next": "~0.1.3"
   },
-  "gitHooks": {
-    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-    "pre-commit": "lint-staged"
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": [

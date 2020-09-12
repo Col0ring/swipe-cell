@@ -10,25 +10,28 @@ npm i @col0ring/swipe-cell
 yarn add @col0ring/swipe-cell
 ```
 
-```js
+```ts
 import { createApp } from 'vue'
 import SwipeCell from '@col0ring/swipe-cell'
 const app = createApp()
 app.use(SwipeCell)
+// 或
+import { SwipeCell } from '@col0ring/swipe-cell'
+export default defineComponent({
+  components: {
+    SwipeCell
+  }
+})
 ```
-
-
 
 ## Api
 
 ### Attributes
 
-| 参数  | 说明          |
-| ------- | ----------------|
+| 参数    | 说明             |
+| ------- | ---------------- |
 | content | 内容区域值       |
 | delText | 默认删除按钮文字 |
-
-
 
 ### Events
 
@@ -36,16 +39,12 @@ app.use(SwipeCell)
 | ------ | ---------------- |
 | delete | 点击删除按钮回调 |
 
-
-
 ### Slots
 
 | 参数                | 说明                         |
 | ------------------- | ---------------------------- |
 | default（默认插槽） | 内容区域                     |
 | actions             | 滑动按钮区域，可手动修改按钮 |
-
-
 
 ## Demo
 
@@ -78,4 +77,3 @@ export default defineComponent({
 })
 </script>
 ```
-
